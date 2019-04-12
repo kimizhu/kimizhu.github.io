@@ -1,0 +1,20 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>.NET Framework Source Code Libraries now available</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    10/3/2007 12:33:00 PM</time>
+<hr>
+<div id='content'><P>Check out Scott Guthrie's blog post for <A class="" href="http://weblogs.asp.net/scottgu/archive/2007/10/03/releasing-the-source-code-for-the-net-framework-libraries.aspx" mce_href="http://weblogs.asp.net/scottgu/archive/2007/10/03/releasing-the-source-code-for-the-net-framework-libraries.aspx">information and screenshots</A>. &nbsp;</P>
+<P>Yes, you'll have to sign a license for it (<A class="" href="http://www.microsoft.com/resources/sharedsource/licensingbasics/referencelicense.mspx" mce_href="http://www.microsoft.com/resources/sharedsource/licensingbasics/referencelicense.mspx">reference license</A>), but this is huge and a big request from customers to be able to step into actual .NET/BCL code. Currently available is Windows Forms, Windows Presentation Foundation, Base Class Libraries (BCL), and more coming soon (ex: LINQ).</P>
+<P>BIG KUDOS&nbsp;to <A class="" href="http://blogs.msdn.com/sburke/" mce_href="http://blogs.msdn.com/sburke/">Shawn Burke</A> for driving this, getting executive support and making it happen and on such a huge scale. This all started back in 2004 with Kit George, <A class="" href="http://blogs.msdn.com/brada/" mce_href="http://blogs.msdn.com/brada/">Brad Abrams</A>, (and me) wanted to release the PDB (debugging files) for the BCL, and we did end up doing a private drop to MVPs, but due to resources, it never got off the ground. Shawn not only resurrected the effort, but he also got more parts of the .NET Framework added and he also solved the bigger issue&nbsp;which was the implementation. </P>
+<P><STRONG>Implementation</STRONG>: The way this works is using the symbol server, a built-in feature of Visual Studio 2005 that enables you to effectively point where the source code is for the .NET Framework. The real value here is that instead of releasing a ton of downloadable versions (.NET Framework x64 SP1 with GDR 123 attached), the Symbol server will "automagically" know what framework/SP/GDR you're running and show you the appropriate code.This means you don't have to worry about not having the right PDB files setup or if you have the latest refresh as it's all taken care of you and you get full debugging support.</P>
+<P>This is just awesome!</P></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

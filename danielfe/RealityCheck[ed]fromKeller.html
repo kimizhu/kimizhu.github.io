@@ -1,0 +1,98 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Reality Check[ed] from Keller</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    9/4/2003 6:52:00 PM</time>
+<hr>
+<div id='content'><body xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+        [Sorry for not posting, but I've been *way* too busy, and blogging is the first thing
+        to cut when push comes to shove] 
+    </p>
+    <p>
+        After my last post on Pascal's Triangle, Brian Keller and I were in his office when
+        he shot me a concerned look and wondered why anyone would care about Pascal's triangle.&#160;
+        Some examples include calculating the&#160;odds of&#160;winning&#160;a pick six lotto
+        ticket, or knowing how many possible hands you can have with a deck of cards.&#160;
+        Given an N of 52 (cards), and an R of 5 (# of cards in a hand) we can plug this into
+        our code and see that there are 2,598,960 unique hands for poker.&#160; I also switched
+        my code to use double because of arithmetic&#160;overflows for ints.&#160; By default,
+        C# does not do boundary checking for arithmetic operations and values silently overflow
+        for runtime expressions.&#160; 
+    </p>
+    <p>
+        Note: Constant expressions don't need the checked keyword as they are checked at compile
+        time rather then runtime.&#160; 
+    </p>
+    <p>
+        &#160;There are a couple of ways you can check for overflows, including the checked
+        keyword and&#160;compiler switch shown below: 
+    </p>
+    <p>
+        <b>Use for a particular expression:</b> 
+        <br />
+    </p>
+    <pre> a = checked(b * c); &#160;</pre>
+    <p>
+    </p>
+    <p>
+        <b>Use it for a block of code</b> 
+        <br />
+    </p>
+    <pre>checked 
+{
+    a = b * c;
+    d = e * f;
+}
+</pre>
+    <p>
+        <b>Use Visual Studio to check all arithmetic operations in a given project</b> 
+        <br />
+    </p>
+    <ol>
+        <li>
+            Right click on the project name in Solution Explorer 
+        </li>
+        <li>
+            Select Properties 
+        </li>
+        <li>
+            Under the Configuration Options folder select Build 
+        </li>
+        <li>
+            Change "Check for arithmetic overflow" from false to true 
+        </li>
+    </ol>
+    <p>
+        <strong>Use the command line compiler to do the same thing</strong> 
+    </p>
+    <ol>
+        <li>
+            Run: <pre>csc.exe foo.cs /checked</pre>
+        </li>
+    </ol>
+    <p>
+        <strong>Tip</strong>: You can also run /checked with a <strong>+</strong> or <strong>- </strong>symbol
+        telling the compiler whether you want it to throw an exception if there is an overflow. 
+    </p>
+    <pre>csc.exe foo.cs /checked+</pre>
+    <p>
+    </p>
+    <p>
+        If you want to turn off arithmetic checking at <em>compile</em> time for constants
+        (please tell me why you would want to do this), you can also&#160;use the unchecked
+        keyword: 
+    </p>
+    <p>
+    </p><pre>a = unchecked(2 * 3);</pre>
+    <pre>&#160;</pre>
+</body></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

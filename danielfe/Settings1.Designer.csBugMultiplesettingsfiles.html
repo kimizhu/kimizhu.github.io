@@ -1,0 +1,16 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Settings1.Designer.cs Bug: Multiple settings files</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    4/27/2008 10:11:26 PM</time>
+<hr>
+<div id='content'><p>I ran into this <a href="http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=112716">bug</a> today which was unfortunately closed as can't repro. I was renaming some AppSettings variable names (right click on a Project's&#160; Properties and go to the Settings tabs) and deleting some other settings, when I did a Search/Replace for the entire solution and somehow wound up with a duplicate Settings.Designer.cs file named Settings1.Designer.cs. This was effectively a clone of Settings.Designer.cs which meant:</p>  <ul>   <li>IntelliSense would report that any AppSettings variables were declared multiple times</li>    <li>The project wouldn't compile because the variables were already declared</li> </ul>  <p>The fix was to </p>  <ul>   <li>From the Error menu, double click the Settings1.Designer.cs file to open it. Right click on the file and select <strong>Open Containing Folder</strong> and backup the the offending file(s) first (just in case).</li>    <li>After backing up, delete the <strong>Settings1.Designer.cs</strong> file </li>    <li>Switch back to VS and ensure <strong>Show All Files </strong>is selected in the <strong>Solution Explorer</strong></li>    <li>Expand Settings.settings in the Solution Explorer and manually delete Settings1.Designer.cs (and if prompted say yes to removal from source control)</li>    <li>Select Build...Clean Project... (or Solution as appropriate)</li> </ul>  <p>You should be good to go, if you get an error about a missing file, you may need to manually open your <strong>csproj </strong>or <strong>sln </strong>file in Notepad and ensure that the MSBuild script doesn't contain a link to Settings1.Designer.cs.</p></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

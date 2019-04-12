@@ -1,0 +1,23 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>TreeView in Arabic</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    2/4/2004 7:14:00 PM</time>
+<hr>
+<div id='content'><P><FONT face=Arial size=2>In the Q&amp;A after my ASP.NET&nbsp;talks at MDC, someone asked whether the new ASP.NET 2.0 TreeView control can render nodes and subnodes in languages that read from right to left like Arabic.&nbsp; I tried testing this by dropping a TreeView control and looked for *some* property that would let me use character sets that read right-to-left, but didn't find anything close.&nbsp; So I forwarded this question onto Goldfarb, who forwarded it onto Brad Millington, who forwarded it to the person that owns testing the Treeview, and as it turns out this is possible (and that we do test for&nbsp;it)&nbsp;but it's not an inherent property in the Treeview control. </FONT></P>
+<P><FONT face=Arial size=2><STRONG>Aside</STRONG>:<EM>&nbsp; Almost everyone at Microsoft is on email *all* the time, so while&nbsp;it may seem like&nbsp;a convoluted process&nbsp;to get three or five or ten&nbsp;degrees of indirection to get a question answered, it&nbsp;could be as short as five minutes for&nbsp;a fully-validated response with VP approval. I love this company :)</EM></FONT></P>
+<P><FONT face=Arial size=2>So how do you do it? Rather then setting a property on a <EM>control</EM>, you set the &#8220;<FONT face="Courier New">dir</FONT>&#8220; property on the <EM>page</EM>, (or to be more specific the body) which will then render the&nbsp; content right to left.&nbsp; But what if you wanted to have multi-directional content on a single page, like a navbar that is right to left in arabic, but content that&nbsp;is left to right in English? And what if you didn't want to use frames (floating or otherwise)?&nbsp; </FONT></P>
+<P><FONT face=Arial size=2><STRONG>Step 1 Define a navbar/master page</STRONG></FONT></P>
+<P><FONT face=Arial size=2>Create&nbsp;the nav bar the same way you always would, in <FONT face="Courier New">&lt;td&gt;&lt;/td&gt;</FONT>, <FONT face="Courier New">&lt;span&gt;&lt;/span&gt;, </FONT><FONT face="Courier New">&lt;div&gt;&lt;/div&gt;</FONT> or whatever tags you use for positioning, and set the&nbsp;<FONT face="Courier New">dir</FONT> property in the&nbsp;<FONT face="Courier New">&lt;td&gt;,&lt;span&gt;</FONT> or <FONT face="Courier New">&lt;div&gt;</FONT> tags to &#8220;<STRONG>rtl</STRONG>&#8221;.</FONT></P>
+<P><FONT face=Arial size=2><STRONG>Step 2 Define the content area for the page </STRONG></FONT></P>
+<P><FONT face=Arial><FONT size=2>Create the content area for the page and set the&nbsp;<FONT face="Courier New">dir</FONT> property&nbsp;to &#8220;<STRONG>ltr</STRONG>&#8220; </FONT></FONT></P>
+<P><FONT face=Arial size=2>&nbsp; </FONT></P></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

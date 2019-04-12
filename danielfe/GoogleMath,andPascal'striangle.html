@@ -1,0 +1,179 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Google Math, and Pascal's triangle</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    8/25/2003 7:42:00 AM</time>
+<hr>
+<div id='content'><body xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+        Google recently added a cool <a href="http://www.google.com/help/features.html#calculator">calulator
+        feature</a>.<br />
+        Simply enter a math formula like "<a href="http://www.google.com/search?q=5*5">5 *
+        5</a>" into Google and it will return a results page with the answer.&#160; 
+    </p>
+    <p>
+        &#160;Asking Google: "<a href="http://www.google.com/search?q=the%20answer%20to%20life,%20the%20universe%20and%20everything">The
+        answer to life, the universe and everything</a>" returns the calculator and the answer&#160;42,
+        based on the calculation by Deep Thought, the super computer in the Douglas Adam's&#160;classic
+        "Life the Universe and Everything". 
+        <br />
+        Google also links to a <a href="http://www.wikipedia.org/wiki/The_Answer_to_Life,_the_Universe,_and_Everything">Wikipedia
+        entry</a>&#160;that explains how 6 * 9 = 42 (hint: not base 10) and how code written
+        in C using macros also correctly multiplies 6*9=42.&#160; I also work in building
+        42 which makes it that much more special :) 
+    </p>
+    <p>
+        Another cool feature I discovered is that Google does factorials. Entering&#160;<a href="http://www.google.com/search?q=4!">4!</a> and
+        you'll see 4*3*2*1 (x * x-1) or 24.&#160; This reminded me of French mathematician
+        Blaise Pascal who's Pascal triangle solves probabability questions. For example, look
+        at the triangle below: 
+    </p>
+    <pre>1			1	1
+	
+2		    1       2       1
+
+3		1	3	3	1
+
+4	    1	    4	    6	    4       1
+
+5	1	5	10	10	5	1
+
+6   1	    6      15        20      15      6       1
+
+
+</pre>
+    Both parents sum to be the total of each child: <pre>1	2
+    3
+</pre>
+    and <pre>4	6
+   10
+</pre>
+    <p>
+        The numbers horizontally represents the possibilities of elements being picked.&#160;
+        Let's use the 4th row and letters A, B, C, D as examples. The fourth row represents
+        the numbers 1, 4, 6, 4, 1 which represent the probability of choosing 0, 1, 2, 3,
+        and 4 of the letters. Let's look at each of these: 
+    </p>
+    <p>
+        0 - There is only one option for picking none of the letters. 
+        <br />
+        1 - Since there are four unique letters, there are four unique possibilities.&#160; 
+        <br />
+        2 - There are six ways of picking exactly two letters: AB, AC, AD, BC, BD, CD. 
+        <br />
+        3 - There are four ways of picking three out of the four elements, simply choose which
+        letter you are not going to pick. 
+        <br />
+        4 - There is only one way to select all of the letters. 
+    </p>
+    <p>
+        Whew, with that explained, we can look at the mathematical formula for this: 
+        <br />
+        N!/(R!(N!-R!)) where N represents the number of elements and R represents the number
+        of matches. 
+    </p>
+    <p>
+        Using our example above, where N is 4 and&#160;we'll set 2 as the number of matches,
+        we get:
+    </p>
+    <p>
+        <a href="http://www.google.com/search?q=4!/(2!(4-2)!)">&#160;4!/(2!(4-2)!)</a>.&#160;
+        Google correctly answers this as 6, matching the value in Pascal's triangle.&#160; 
+    </p>
+    <p>
+        If you&#160;didn't have&#160;Google, you can represent&#160;Pascal's formula in C#
+        with the code below:&#160; 
+    </p>
+    <pre>	
+class f
+{
+	//Factorial
+	private static long fac(long x)
+	{
+		for(long i=x-1;i&gt;0;i--)
+		{
+			x *= i;			
+		}
+		return x;
+	
+	}
+
+	public static long Pascal(long n, long r)
+	{
+		
+		return fac(n)/(fac(r) * fac(n-r));
+	
+	}
+}
+</pre>
+    <p>
+        Another interesting mathematical pattern in Pascal's triangle is the Fibonacci sequence
+        on the triangle diagonals. 
+    </p>
+    <p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Fibonacci # 
+                    </td>
+                    <td>
+                        Diagonal #'s 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1 
+                    </td>
+                    <td>
+                        1 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2 
+                    </td>
+                    <td>
+                        1+1 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3 
+                    </td>
+                    <td>
+                        1+2 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5 
+                    </td>
+                    <td>
+                        1+3+1 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        8 
+                    </td>
+                    <td>
+                        1+4+1 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p>
+        Cool stuff, now do we call Google's calculator a web service? 
+    </p>
+</body></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

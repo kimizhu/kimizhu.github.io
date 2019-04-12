@@ -1,0 +1,25 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>How To Manually Create Outlook Calendar Appointments</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    2/8/2006 9:38:00 AM</time>
+<hr>
+<div id='content'><p><font face=Arial size=2>Here's a gem from David Goodhand, a Microsoft vet that arguably taught me everything I needed to know about giving technical presentations on how to manually create Outlook Calendar appointments.</font></p>
+<p><font face=Arial size=2>Copy/Pasted from David's email </font></p>
+<ol>
+<li><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Verdana"><font color=#000000><font face=Arial><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p><em>If you’re try to write an appt directly into someone’s Exchange-based calendar, then use the Exchange CDO object model.</em></o:p></font></font></span></li>
+<li><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Verdana"><font color=#000000><font face=Arial><o:p><em>If you are trying to generate an appt that the user can click on and add to their calendar, look into the .VCS (vCalendar) file format. For example, look up an item on ebay and click the click “Add to Calendar”. The server generates a .VCS file which the user then clicks on. As the user downloads or opens the .VCS file, Outlook snags it and makes an appt. out of it.</em></o:p></font></font></span></li></ol><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Verdana"><font color=#000000><font face=Arial><o:p></o:p></font></font></span><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Verdana"><font color=#000000><font face=Arial><o:p>
+<p><br /><em>Here’s what an example VCS looks like:</em>&nbsp;</p>
+<p><font face="Courier New">BEGIN:VCALENDAR<br />BEGIN:VEVENT<br />SUMMARY:eBay Reminder: SONY DIRECTV ULTIMATETV W60&nbsp; HU REMOTE V3.5<br />DESCRIPTION:The end time for eBay listing number 3061186172 is scheduled to end soon! Click here to go to the page: </font><a href="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item=3061186172&amp;sspagename=calrem"><font face="Courier New">http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item=3061186172&amp;sspagename=calrem</font></a></p>
+<p><font face="Courier New">DTSTART:20031128T025334Z<br />DTEND:20031128T045334Z<br />END:VEVENT<br />END:VCALENDAR</font></p>
+<p><em>Learn more about this file format at </em><a href="http://www.imc.org/pdi/"><em>http://www.imc.org/pdi/</em></a><em>.</em></p>
+<p></p></o:p></font></font></span>&nbsp;</div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

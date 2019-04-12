@@ -1,0 +1,38 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Embedding sound files into a Windows app (Whidbey)</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    2/19/2004 3:05:00 PM</time>
+<hr>
+<div id='content'><P><FONT face=Arial size=2>I have to confess: I've been coding again...its my one escape from the 104 flagged emails that need responses or large amounts of work done, and the as-yet&nbsp;uncovered firedrills which I'm sure are just one Outlook-sync away.&nbsp;For now, I blog...&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>Recipe</STRONG>: Embed a sound file&nbsp;&nbsp;that will play when a Windows form application is loaded.</FONT></P>
+<P><FONT face=Arial size=2><STRONG>Pre-cooking steps</STRONG></FONT></P>
+<UL>
+<LI><FONT face=Arial size=2>Open Whidbey M2 PDC (or greater)</FONT></LI>
+<LI><FONT face=Arial size=2>Create a new Windows Form application</FONT></LI>
+<LI><FONT face=Arial size=2>Have Solution Explorer and the Properties Window visible in Visual Studio</FONT></LI></UL>
+<P><STRONG><FONT face=Arial size=2>Step 1 - Add and Embed&nbsp;your resource</FONT></STRONG></P>
+<P><FONT face=Arial size=2>Windows Forms enables you to embed resources (like images, icons, sound files, etc) directly into your application.&nbsp; To embed a resource, all you have to do is:</FONT></P>
+<OL>
+<LI><FONT face=Arial size=2>Right click on your project select &#8220;add existing item...&#8220; to open the Add Item dialog box</FONT></LI>
+<LI><FONT face=Arial size=2>In the add Item dialog box, change the &#8220;File Type&#8221; dropdown to show all files</FONT></LI>
+<LI><FONT face=Arial size=2>Navigate to the location of your resource, in our case &#8220;sound1.wav&#8220; and click &#8220;Open&#8220; to add it to your project</FONT></LI>
+<LI><FONT face=Arial size=2>With &#8220;sound1.wav&#8220; selected, change the &#8220;Build Action&#8220; property in the properties window to &#8220;Embedded Resource&#8220;</FONT></LI>
+<LI><FONT face=Arial size=2>This resource will now be embedded directly into the exe.</FONT></LI></OL>
+<P><FONT face=Arial size=2><STRONG>Step 2 - Using an embedded resource</STRONG></FONT></P>
+<UL>
+<LI><FONT face=Arial size=2>&nbsp;Since we want to play a sound file when the form loads, simply drag and drop the new Sound control from the toolbox onto your Windows form application.&nbsp; This will create an object named sound1 that we will programatically set our embedded sound source to.</FONT></LI>
+<LI><FONT face=Arial size=2>Open up the Form Load event and type<BR></FONT><B><FONT color=#000080><FONT face="Courier New" size=2>&nbsp; Stream</FONT></B></FONT><FONT face="Courier New"><FONT size=2> _sound = <FONT color=#0000ff>this</FONT>.GetType().<B><FONT color=#000080>Assembly</B></FONT></FONT></FONT><FONT face="Courier New" size=2>.GetManifestResourceStream&nbsp; ("MyAssemblyName.sound1.wav");<BR></FONT><FONT size=2><FONT face="Courier New">&nbsp; sound1.</FONT><B><FONT color=#000080><FONT face="Courier New">Stream</FONT></B></FONT></FONT><FONT size=3><FONT face="Courier New" size=2> = _sound;<BR></FONT><FONT face="Courier New" size=2>&nbsp; sound1.Play();</FONT></FONT></LI>
+<LI><FONT size=3><FONT face=Arial size=2>In the first line, I create a stream object that will contain the contents of my sound file, and I use reflection to pull in the stream from a particular file in the assembly using the <EM>AssemblyName.FileName </EM>naming convention.&nbsp; Next I'll&nbsp;set the&nbsp;Stream property for Sound1 to point to our wav file, and then&nbsp;play the sound. Done :)</FONT></FONT></LI>
+<LI><FONT><FONT face=Arial size=2>&nbsp;</FONT><FONT face=Arial size=2>If this was a picture file, you could drag and drop a PictureBox onto the control and add the following code.<BR></FONT></FONT><FONT size=3><B><FONT color=#000080><FONT face="Courier New" size=2>Stream</FONT></B></FONT><FONT face="Courier New"><FONT size=2> _picture = <FONT color=#0000ff>this</FONT>.GetType().<B><FONT color=#000080>Assembly</B></FONT></FONT></FONT><FONT face="Courier New"><FONT size=2>.GetManifestResourceStream("MyAssemblyName.pic1.jpg");<BR>System.Drawing.<B><FONT color=#000080>Bitmap</B></FONT></FONT></FONT><FONT face="Courier New"><FONT size=2> pic = <FONT color=#0000ff>new</FONT> System.Drawing.<B><FONT color=#000080>Bitmap</B></FONT></FONT></FONT><FONT face="Courier New"><FONT size=2>(_picture);<BR>pictureBox1.<B><FONT color=#000080>Image</B></FONT></FONT></FONT><FONT size=3><FONT face="Courier New" size=2> = pic;</FONT></FONT></FONT></LI></UL>
+<P><FONT><FONT face=Arial size=2>Gasp, Outlook says I have to go, but that's pretty much it for simple scenarios, I'll blog more later.</FONT></FONT></P>
+<P><FONT size=3><FONT size=3>&nbsp;</P></FONT></FONT></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

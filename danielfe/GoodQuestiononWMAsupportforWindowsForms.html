@@ -1,0 +1,42 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Good Question on WMA support for Windows Forms</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    2/19/2004 6:19:00 PM</time>
+<hr>
+<div id='content'><P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial><FONT size=2><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p>&nbsp;J. Daniel Smith in the comments to my last post writes:<BR>&#8220; </o:p><I style="mso-bidi-font-style: normal">Why doesn't the new Sound control support WMA files? (Yes, I know it's just a wrapper around the Win32 control...)&nbsp;</I></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><I style="mso-bidi-font-style: normal"><FONT face=Arial><FONT size=2>But still, this "mixed messaging" from Microsoft is a bit annoying at times: use WMA (and not MP3)...unless you want to embed it in your application, then you have to use WAV.&#8220;<o:p></o:p></FONT></FONT></I></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Arial size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Arial size=2><STRONG>Response</STRONG>:</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial><FONT size=2>Very good questions, and&nbsp;I have to give a good response to someone with &#8220;Daniel&#8220; in&nbsp;their name:)&nbsp;&nbsp;You are correct, t</FONT></FONT><FONT face=Arial><FONT size=2>he sound control does not support wma files (or MP3 file for that matter).<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Arial size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial><FONT size=2>Since I don't work on the team that built that control, don't consider my answer definitive (someone from that team, feel free to chime in here), but I'll give you my best guess.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>One of the issues with playing sound files is that you need the codec that translates bits into music, and each&nbsp;music file type will have its own.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>For example in MP3 files, you must license the codec from the Franhofer institute which owns the patent for MP3 (also known as Moving Picture Experts Group Layer-3 Audio), and this codec is currently in Windows Media Player, <EM>not</EM> in Windows.<o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Arial size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial><FONT size=2>Aside: For a short view on the history of MP3, visit&nbsp;<A href="http://www.du.edu/~yuchang/history.htm">http://www.du.edu/~yuchang/history.htm</A><o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Arial size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial><FONT size=2>For wma files, again Windows Media Player is the application that contains the codec and not Windows itself. Rather then discuss how great it would be from a development perspective if you could assume that Windows OS had better&nbsp;support for great sound codecs built-in, (was there a lawsuit about us adding more features to Windows?? Nah, everyone loves us), I'll stop here&nbsp;and tell you how you can solve this issue by using Windows Media Player:<o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Arial size=2>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial><FONT size=2><STRONG>What do you do if you want to play a WMA file in your Windows application?<o:p></o:p></STRONG></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2>You can easily play wma files by drag/dropping a Windows Media Player control onto your application, which will add the ability to play files just like WMP, and even includes other WMP features like playlist support.&nbsp; This is done&nbsp;by&nbsp;adding a reference&nbsp;to the control - right click on the toolbox, select add&nbsp;items,&nbsp;select the COM tab, and scroll down to Windows Media Player (for reference it's at: &#8220;</FONT><FONT face=Arial size=2>C:\windows\system32\wmp.dll&#8220;).</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2></FONT>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2>I've included some links to code samples using WMP, including&nbsp;some by <A href="http://blogs.msdn.com/duncanma/"><STRONG>Duncan</STRONG></A> and <A href="http://blogs.msdn.com/ericgu/"><STRONG>Eric</STRONG></A>.</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2></FONT>&nbsp;</P>
+<UL>
+<LI>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2>&nbsp;Playing with music files </FONT><A href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncodefun/html/code4fun01242003.asp?_r=1"><FONT face=Arial size=2>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncodefun/html/code4fun01242003.asp?_r=1</FONT></A></DIV></LI>
+<LI>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2>Building a lightweight message passing system - </FONT><A href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp09182003.asp"><FONT face=Arial size=2>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp09182003.asp</FONT></A></DIV></LI>
+<LI>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2>WMP SDK Reference - </FONT><A href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/wmform/htm/sampleapplications.asp"><FONT face=Arial size=2>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/wmform/htm/sampleapplications.asp</FONT></A></DIV></LI>
+<LI>
+<DIV class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT face=Arial size=2>Sound Effects Rack using&nbsp;WMP - </FONT><A href="http://www.codeproject.com/useritems/soundplayer.asp"><FONT face=Arial size=2>http://www.codeproject.com/useritems/soundplayer.asp</FONT></A></DIV></LI></UL>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt">&nbsp;</P></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

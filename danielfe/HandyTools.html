@@ -1,0 +1,66 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Handy Tools</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    9/8/2003 2:28:00 AM</time>
+<hr>
+<div id='content'><body xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+        I'm still catching up on blog entries that I've been meaning to post, here are some
+        of the tools I mentioned in my TechEd New Zealand sessions. 
+    </p>
+    <p>
+        <strong>FXCop<br />
+        </strong>FxCop is a tool that lets you know whether you code conforms to specific
+        rules like naming guidelines, CLS compliance and much more.&#160; Just point it to
+        your DLL and you'll get a list of issues with your code (You can check whether you
+        want to ignore certain errors).&#160;Download <a href="http://www.gotdotnet.com/team/fxcop/">here</a>. 
+    </p>
+    <p>
+        <strong>ASP.NET Version Switcher<br />
+        </strong>Have you ever actually tried to run ASP.NET applications that use different
+        versions of the .NET Framework 1.0, 1.1, <em>and</em> Whidbey?&#160; This is totally
+        possible, but it can be a pain from a configuration perspective.&#160; The issue is
+        that IIS requires file extensions to be mapped to a specific ISAPI extension, so to
+        have multiple virtual directories that use different versions of the framework, you
+        would have to manually change the file mapping configuration for each virtual directory.
+        (To do this go to IIS Manager, right click on a Virtual directory, select configuration...
+        and change the file mappings).&#160; You can find more information about side-by-side
+        ASP.NET support on&#160;<a href="http://www.asp.net/faq/SideBySide.aspx">ASP.NET</a>.&#160;
+        I mentioned&#160;in my talk&#160;Dennis Bauer's (blog <a href="http://www.denisbauer.com/Weblog/">here</a>)&#160;<a href="http://www.denisbauer.com/NETTools/ASPNETVersionSwitcher.aspx">ASP.NET
+        Version Switcher</a> that&#160;can&#160;automatically change&#160;versions for you.
+        Very&#160;cool and easy tool [<a href="http://www.denisbauer.com/NETTools/ASPNETVersionSwitcher.jpg">picture</a>].&#160; 
+    </p>
+    <p>
+        <strong>Web Service Studio<br />
+        </strong>If you find web services in <a href="http://www.uddi.org">uddi.org</a>, <a href="http://www.xmethods.net">xmethods.net</a> or&#160;<a href="http://www.salcentral.com/salnet/webserviceswsdl.asp">SalCentral</a> (which
+        calls itself "<em>The Napster of Web Services"</em>), you'll find Web Service Studio&#160;to&#160;be
+        the easiest way to inspect the service before you actually start writing code to it.
+        Download it <a href="http://www.gotdotnet.com/Community/UserSamples/Details.aspx?SampleGuid=65a1d4ea-0f7a-41bd-8494-e916ebc4159c">here</a>. 
+    </p>
+    <p>
+        <strong>CLR Profiler<br />
+        </strong>If you want to know how efficiently (or inefficiently)&#160;memory is being
+        used by your application, you need the CLR profiler.&#160; Here's the <a href="http://download.microsoft.com/download/a/b/d/abd115c6-a96e-4d8d-b7de-9480deb6cd5c/CLRProfiler.EXE">link
+        to&#160;download</a> it (its difficult to find on MSDN), and you can watch the .NET
+        Show with Gregor Noriskin who walks through using the tool&#160;<a href="http://msdn.microsoft.com/msdntv/episode.aspx?xml=episodes/en/20030729CLRGN/manifest.xml">here</a>.&#160; 
+    </p>
+    <p>
+        <strong>NetPing and SnippetCompiler</strong> 
+        <br />
+        Scott Hanselman who always has some awesome tools up his pocket, also recently mentioned
+        two tools by Jeff Key (blog <a href="http://weblogs.asp.net/Jkey/">here</a>) <a href="http://www.sliver.com/dotnet/netping/">NetPing</a>&#160;and&#160;<a href="http://www.sliver.com/dotnet/SnippetCompiler/">SnippetCompiler</a>.&#160;
+        I haven't tried the SnippetCompiler (yet)&#160;but NetPing is sweet [<a href="http://www.sliver.com/dotnet/netping/netping.PNG">picture</a>]. 
+    </p>
+    <p>
+    </p>
+</body></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

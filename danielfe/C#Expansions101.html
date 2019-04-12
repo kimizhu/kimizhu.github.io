@@ -1,0 +1,219 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>C# Expansions 101</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    11/11/2003 12:53:00 AM</time>
+<hr>
+<div id='content'><body xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+        <a href="http://weblogs.asp.net/jkey/">Jeff Key</a> of <a href="http://www.sliver.com/dotnet/netping">NetPing</a> and <a href="http://www.sliver.com/dotnet/SnippetCompiler">SnippetCompiler</a> fame,
+        wrote a nice expansion for using a <a href="http://weblogs.asp.net/jkey/posts/36500.aspx">generic
+        list</a>, so I thought I would share some useful information on expansions. 
+    </p>
+    <p>
+        <strong>NOTE</strong> - This is all based on Whidbey Tech Preview, so things can and
+        will change. 
+    </p>
+    <p>
+    </p>
+    <h3>What are Expansions? 
+    </h3>
+    <p>
+        Expansions are&#160;fill-in-the-blank snippets of code that have several benefits.&#160;
+        They help automate boiler-plate code&#160;constructs like looping through a collection
+        using a foreach statement, they&#160;help reduce&#160;syntax errors and they're&#160;a
+        perfect example of code-focused RAD.&#160; One of the things you'll notice with C#
+        Whidbey is the concept of code-focused RAD, meaning RAD isn't just limited to&#160;drag-and-drop
+        wizards,&#160;we're going to add&#160;productivity features&#160;directly into the
+        code editor where C# developers spend the majority of their time. 
+    </p>
+    <p>
+        Note - You can find the list of expansions that come with Whidbey in the&#160;"C:\Program
+        Files\Microsoft Visual Studio .NET Whidbey\VC#\ExStencil\" directory. 
+    </p>
+    <h2>Dissecting an Expansion 
+    </h2>
+    <p>
+        To help explain expansions, I've created two simple custom expansions in an xml file
+        named custom1.xml and placed the file in the ExStensil directory mentioned above.&#160;
+        The two expansion are explained below:&#160; 
+    </p>
+    <ul>
+        <li>
+            Console ReadLine: This is a very simple expansion that automates calling the Readline
+            method of the Console class.&#160; 
+        </li>
+        <li>
+            Console WriteLine: This is a slightly more complicated expansion that shows how you
+            can use variables directly within an expansion by calling the Writeline method of
+            the Console class.&#160; 
+        </li>
+    </ul>
+    <p>
+    </p><![CDATA[
+			System.Console.Readline();
+			$selected$ $end$
+		]]><![CDATA[
+
+			System.Console.Writeline($value$);
+			$selected$ $end$
+		]]>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+        The code for these expansions is below: 
+    </p>
+    <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+    &lt;ExStencilCollection&gt;<br />
+    &#160;&lt;ExStencil&gt;<br />
+    &#160;&lt;header&gt;<br />
+    &#160;&#160;&lt;title&gt;Console ReadLine&lt;/title&gt;<br />
+    &#160;&#160;&lt;shortcut&gt;cr&lt;/shortcut&gt;<br />
+    &#160;&#160;&lt;description&gt;Expansion snippet for Console.ReadLine&lt;/description&gt;<br />
+    &#160;&#160;&lt;category&gt;Expansion&lt;/category&gt;<br />
+    &#160;&lt;/header&gt;</pre>
+    <pre>&#160;&lt;snippet&gt;<br />
+    &#160;&#160;&lt;code language="csharp"&gt;<br />
+    &#160;&#160;&#160;&lt;![CDATA[<br />
+    &#160;&#160;&#160;System.Console.ReadLine();<br />
+    &#160;&#160;&#160;$selected$ $end$<br />
+    &#160;&#160;]]&gt;<br />
+    &#160;&#160;&lt;/code&gt;<br />
+    &#160;&#160;&#160;&#160;<br />
+    &#160;&lt;/snippet&gt;<br />
+    &#160;&lt;/ExStencil&gt;</pre>
+    <pre>&lt;ExStencil&gt;<br />
+    &#160;&lt;header&gt;<br />
+    &#160;&#160;&lt;title&gt;Console WriteLine&lt;/title&gt;<br />
+    &#160;&#160;&lt;shortcut&gt;cw&lt;/shortcut&gt;<br />
+    &#160;&#160;&lt;description&gt;Expansion snippet for Console.WriteLine&lt;/description&gt;<br />
+    &#160;&#160;&lt;category&gt;Expansion&lt;/category&gt;<br />
+    &#160;&lt;/header&gt;</pre>
+    <pre>&#160;&lt;snippet&gt;<br />
+    &#160;&#160;&lt;declarations&gt;<br />
+    &#160;&#160;&lt;literal default="true"&gt;<br />
+    &#160;&#160;&#160;&lt;id&gt;value&lt;/id&gt;<br />
+    &#160;&#160;&#160;&lt;tooltip&gt;Value to write to the Console&lt;/tooltip&gt;<br />
+    &#160;&#160;&lt;default&gt;"hello world"&lt;/default&gt;<br />
+    &#160;&#160;&lt;/literal&gt;<br />
+    &#160;&#160;&lt;/declarations&gt;</pre>
+    <pre>&#160;&#160;&lt;code language="csharp"&gt;<br />
+    &#160;&#160;&#160;&lt;![CDATA[</pre>
+    <pre>&#160;&#160;&#160;System.Console.WriteLine($value$);<br />
+    &#160;&#160;&#160;$selected$ $end$<br />
+    &#160;&#160;]]&gt;<br />
+    &#160;&#160;&lt;/code&gt;<br />
+    &#160;&#160;&#160;&#160;<br />
+    &#160;&lt;/snippet&gt;<br />
+    &#160;&lt;/ExStencil&gt;<br />
+    &lt;/ExStencilCollection&gt; </pre>
+    <EXSTENCIL>
+    </EXSTENCIL>
+    All expansions are written inside of &lt;ExStencil&gt;&lt;ExStencil&gt; tags. If you
+    have multiple expansions in a file, they should be within&#160;&lt;ExStencilCollection&gt;&lt;/ExStencilCollection&gt;
+    tags.<br />
+    <h3>Header Section&#160; 
+    </h3>
+    The header section defines the general attributes of an expansion.&#160; Below are
+    definitions of the tags within the header section:&#160; 
+    <p>
+    </p>
+    <ul>
+        <li>
+            <b>title</b>: The expansion's title. 
+        </li>
+        <li>
+            <b>shortcut</b>: These are the shortcut keys needed to invoke the expansion. 
+        </li>
+        <li>
+            <b>description</b>: This is the more verbose description of the expansion. 
+        </li>
+        <li>
+            <b>category</b>: This can be "Expansion" and/or "SurroundWith", I'll blog more on
+            SurroundWith in the future... 
+        </li>
+    </ul>
+    <p>
+        The title and description values are used to provide information to the developer
+        using the expansion.&#160; For example, when a user sees the list of available expansions,
+        if they highlight an expansion, they will see the expansion title and description
+        in this format: <i>title</i>(<i>description</i>). In the case of Console.ReadLine,
+        the user will see "Console ReadLine (Expansion snippet for Console.ReadLine)".&#160;
+        The category value determines&#160;which&#160;IDE context menu will list the expansion.&#160; 
+    </p>
+    <h3>Snippet Section 
+    </h3>
+    The next section of the expansion is the snippet section which is divided into two
+    sections, the declarations and the code section.&#160; The declarations section contains
+    any user defined variables, while the code section represents the actual code for
+    the expansion.&#160; Below are definitions of tags within the declaration section: 
+    <ul>
+        <li>
+            <b>literal</b>: Literals represent variables within your code. 
+        </li>
+        <li>
+            <b>id</b>: The id tag represents an identifier for a variable. 
+        </li>
+        <li>
+            <b>default</b>: The default tag represents the default value for that variable. 
+        </li>
+        <li>
+            <b>tooltip</b>: The tooltip is a description that is displayed to the user when inserting
+            a value for the variable. 
+        </li>
+    </ul>
+    <p>
+        For example, when a user invokes the Console WriteLine expansion, the cursor is placed
+        directly on the value literal, which by default will have the value "hello world".&#160;
+        Visual Studio will automatically select the text, so if a user starts typing, the
+        default value is automatically replaced.&#160; 
+    </p>
+    <p>
+        The next part is the actual code for the expansion, which is rendered in a CDATA XML
+        tag so that XML parsers ignore the contents and you can use reserved XML escape characters
+        like "?", "&lt;", "&gt;", in the code section. 
+    </p>
+    <ul>
+        <li>
+            <b>$<em>variable name</em>$</b>: Literals declared in the header section should be
+            surrounded with "$" symbols to denote that they are variables. 
+        </li>
+        <li>
+            <b>$selected$</b>: This built-in variable determines where the cursor will be positioned
+            when the expansion is completed. 
+        </li>
+        <li>
+            <b>$end$</b>: This built-in variable denotes the end of the expansion. 
+        </li>
+    </ul>
+    <p>
+        In the Console WriteLine expansion, the code section is declared such that the&#160;$value$
+        variable will be directly inside the Writeline method call.&#160; After completing
+        the expansion, the cursor will&#160;then be positioned on the $selected$ section.&#160; 
+    </p>
+    <p>
+        &#160;&#160;&#160;&#160;&#160; System.Console.WriteLine($value$); 
+    </p>
+    <p>
+        As you can see, writing expansions is easy,&#160;and they're one of my favorite features&#160;in
+        Whidbey.&#160; If you're into experimentation, I suggest you open up the expansions.xml
+        file&#160;located in the ExStencils directory and begin playing.&#160;&#160;I'll be
+        providing more information on expansions in future posts, but if you have feedback
+        on expansions (both the good and the bad) please let us know. 
+    </p>
+    <h3>
+    </h3>
+    <h3>
+    </h3>
+</body></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

@@ -1,0 +1,38 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>Cool Controls for Windows Forms!</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    6/17/2004 9:25:00 AM</time>
+<hr>
+<div id='content'><P><FONT face=Arial size=2><A href="http://blogs.msdn.com/rgreen_msft/archive/2004/06/11/153858.aspx">Robert Green blogs</A> about the release of the VB.NET PowerPack.&nbsp; The&nbsp;PowerPack is a set of 7 cool new Windows Forms controls written in Visual Basic.NET.&nbsp;&nbsp;Don't&nbsp;let the &#8220;VB&#8220; in the title or your own language bias fool you,&nbsp;you can use these controls in any .NET language.&nbsp;&nbsp;You can download the controls from the </FONT><A href="http://www.gotdotnet.com/Community/Workspaces/workspace.aspx?id=167542e0-e435-4585-ae4f-c111fe60ed58"><FONT face=Arial size=2>GotDotNet workspace</FONT></A><FONT face=Arial size=2>.&nbsp;&nbsp;My favorite control is the NotificationWindow control, which you've seen in MSN Messenger, SharpReader and several other applications. The code below creates a notification window, that when clicked, changes the label on a form. </FONT></P><FONT face=Arial size=2>
+<P><IMG src="http://www.danfernandez.com/view/view.aspx?ID=29" text="Notification Window"></P></FONT>
+<P>&nbsp;<SPAN style="FONT-SIZE: 11pt; COLOR: blue; FONT-FAMILY: 'Lucida Console'">private</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"> <SPAN style="COLOR: blue">void</SPAN> Form1_Load(<SPAN style="COLOR: blue">object</SPAN> sender, System.EventArgs e)<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'">{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="COLOR: green">//Create Toast<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>NotificationWindow toast = <SPAN style="COLOR: blue">new</SPAN> NotificationWindow();<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>toast.TextIsHyperLink = <SPAN style="COLOR: blue">true</SPAN>;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>toast.ShowStyle = NotificationShowStyle.Slide;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="COLOR: green">//Create Message for 6K milliseconds <o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>toast.Notify("Hello World!", 6000);<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>toast.Click += <SPAN style="COLOR: blue">new</SPAN> NotificationWindow.ClickEventHandler(toast_Click);<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'">}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; COLOR: blue; FONT-FAMILY: 'Lucida Console'">private</SPAN><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"> <SPAN style="COLOR: blue">void</SPAN> toast_Click(<SPAN style="COLOR: blue">object</SPAN> sender, EventArgs e)<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'">{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="COLOR: green">//Event fires when a user clicks on the toast<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>label1.Text = "You clicked Hello World";<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: 'Lucida Console'">}</SPAN><SPAN style="mso-bidi-font-size: 10.0pt"><o:p></o:p></SPAN></P>
+<P><FONT face=Arial size=2>If you&nbsp;are a true language snob (shame on you)&nbsp;and don't want to use these b/c&nbsp;it's called a&nbsp;VBPowerPack, you can always use a using alias at the top of your file as shown below:&nbsp;</FONT></P>
+<P><FONT face=Arial><FONT size=2><FONT color=#0000ff>using</FONT> PowerPack = VbPowerPack;</FONT></FONT></P>
+<P><FONT face=Arial><FONT size=2></FONT><FONT size=3>&nbsp;</P></FONT></FONT></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>

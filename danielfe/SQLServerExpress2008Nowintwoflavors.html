@@ -1,0 +1,16 @@
+<html><head>
+<meta charset='UTF-8'>
+<link href='resource/bootstrap.min.css' rel='Stylesheet' type='text/css' />
+<link href='resource/style.css' rel='Stylesheet' type='text/css' />
+</head>
+<body>
+<div id='page'>
+<h1 class='entry-title'>SQL Server Express 2008: Now in two flavors</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Dan Fernandez - MSFT' target='_blank'>Dan Fernandez - MSFT</a>
+<time>    6/10/2008 4:27:55 PM</time>
+<hr>
+<div id='content'><p>As I <a href="https://channel9.msdn.com/posts/Dan/SQL-Server-2008-RC0-now-available-for-download/">blogged about on Channel 9 earlier</a> (I love that we can have text *and* video posts now), SQL Server 2008 RC0 is now <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=35F53843-03F7-4ED5-8142-24A4C024CA05&amp;displaylang=en">available for download</a>.</p>  <p>On the download page, you may have noticed that there are two versions of SQL Server Express</p>  <ol>   <li>SQL Server 2008 Express</li>    <li>SQL Server 2008 Express with Advanced Services</li> </ol>  <p>While the <a href="http://www.microsoft.com/sqlserver/2008/en/us/editions.aspx">SQL Server 2008 Editions page</a> doesn't list the &quot;Advanced Services&quot; Express Edition, luckily Mike Wachal from the SQL Server Express team posted a detailed breakdown of the differences on the <a href="http://blogs.msdn.com/sqlexpress/archive/2008/06/10/sql-server-2008-express-rc0.aspx">SQL Server Express blog</a>. </p>  <p>The key features that are in Advanced Services that you won't get with regular Express are: </p>  <ul>   <li>PowerShell integration by default</li>    <li>Synchronization Services installed by default</li> </ul>  <p>As well as a number of Reporting Services features</p>  <ul>   <li>Ability to increase Reporting Services Memory Limit</li>    <li>Reporting Services Word/Rich Text Export</li>    <li>IIS Agnostic Report Deployment</li>    <li>Enhanced Gauges and Charting </li> </ul>  <p>It also appears that the regular SQL Server Express also supports installing the 32-bit version on a x64 platform (using <a href="http://en.wikipedia.org/wiki/Windows_on_Windows">WoW</a>), but as both Express versions including 32-bit and 64-bit native installations, I'm not sure why you would want to install the 32-bit version on x64. </p>  <p>&#160;</p>  <p><strong>What hasn't changed</strong></p>  <p>The physical limitations for SQL Server haven't changed between 2005 and 2008 (1 CPU, 1GB Memory, 4GB of user data per database), but the nice thing is that SQL Server Express will take advantage of multiple cores on a single CPU. </p></div>
+</div></body>
+<script type='text/javascript' src='resource/jquery-1.12.1.min.js'></script>
+<script type='text/javascript' src='resource/replace.js'></script>
+</html>
