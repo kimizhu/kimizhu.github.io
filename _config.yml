@@ -1,0 +1,19 @@
+# Build settings
+markdown: kramdown
+
+paginate: 10
+plugins: [jekyll-paginate]
+paginate_path: "page:num"
+permalink: /blog/:year/:month/:day/:title
+
+exclude:
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.BSD3.md
+  - LICENSE.MIT.md
+  - README.md
+  - tests.py
+
+  - vendor
+theme: null
