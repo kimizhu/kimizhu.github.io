@@ -57,7 +57,7 @@ more.
 
  
 
-![](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/coding4fun/WindowsLiveWriter/FacebookDeveloperToolkit_F357/wpF_thumb.jpg)
+![](media/wpF_thumb.jpg)
 
 Scoble calls Facebook the new Rolodex. Well guess what, there already is
 a Facebook Rolodex-like application that's pulls data from that Walled
@@ -70,7 +70,7 @@ Garden. 
 
  
 
-![](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/FacebookF8EventPhotos_105F9/danl%5B4%5D.jpg)
+![](media/danl4.jpg)
 
  
 

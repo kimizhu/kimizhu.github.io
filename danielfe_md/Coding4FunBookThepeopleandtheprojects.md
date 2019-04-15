@@ -11,7 +11,7 @@ PM
 
 <div id="content">
 
-![book\_cover\_med](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/book_cover_med_3.jpg)
+![book\_cover\_med](media/book_cover_med_3.jpg)
 
  
 
@@ -41,7 +41,7 @@ book\!
 
  
 
-![brianpeek](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/brianpeek_9bc1beac-bee1-4967-9593-d58501c6da5f.png)
+![brianpeek](media/brianpeek_9bc1beac-bee1-4967-9593-d58501c6da5f.png)
 
 **[Brian Peek](http://www.brianpeek.com)** - Brian authored several of
 the chapters in the book and he's been a regular Coding4Fun contributor,
@@ -56,7 +56,7 @@ chapter.
 
  
 
-![johnnylee](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/johnnylee_04562169-8f85-423e-9dd8-6a831c0b6c3d.png)
+![johnnylee](media/johnnylee_04562169-8f85-423e-9dd8-6a831c0b6c3d.png)
 
 **[Johnny Chung Lee](http://procrastineering.blogspot.com/)** - Johnny
 was a PhD student from Carnegie Mellon University that became Internet
@@ -71,7 +71,7 @@ video](https://www.youtube.com/watch?v=5s5EvhHy7eQ)).
 
  
 
-![gaborratky](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/gaborratky_762a3823-615d-45f0-84f7-bb5c1d0a2707.png) 
+![gaborratky](media/gaborratky_762a3823-615d-45f0-84f7-bb5c1d0a2707.png) 
 
 **[Gabor Ratky](http://rgabostyle.com/)** - Gabor is the Lead Developer
 on [AddOn Studio for World of
@@ -84,7 +84,7 @@ chapter.
 
  
 
-![clintrutkas](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/clintrutkas_ef68da37-6149-436b-a52c-d4fa5b27426c.png)
+![clintrutkas](media/clintrutkas_ef68da37-6149-436b-a52c-d4fa5b27426c.png)
 
 **[Clint Rutkas](http://betterthaneveryone.com/)** - Clint is the
 Content Strategist for Coding4Fun and he's built some pretty impressive
@@ -92,7 +92,7 @@ projects including the Disco Dance Floor and the Segway Skateboard.
 Clint co-authored the TwitterVote
 chapter.
 
-![danfernandez](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/danfernandez_933bf263-754e-4cf0-97e5-0a97190c5d9f.png)
+![danfernandez](media/danfernandez_933bf263-754e-4cf0-97e5-0a97190c5d9f.png)
 
 [Dan Fernandez](http://blogs.msdn.com/danielfe) - And of course me. I
 worked on the InnerTube, PeerCast, Lego Soldier, Warcraft RSS Reader,
@@ -110,7 +110,7 @@ Create a 2D clone of Space Invaders with XNA, including how to build for
 the PC, Xbox 360, and
 Zune.
 
-![alienattack](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/alienattack_3.png)
+![alienattack](media/alienattack_3.png)
 
  
 
@@ -120,7 +120,7 @@ Create a 2D side-scroller game with Popfly Game Creator and custom LEGO
 characters built with [LEGO Digital
 Designer](http://ldd.lego.com/).
 
-![2-12\_CompletedMainActor](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/2-12_CompletedMainActor_3.png)
+![2-12\_CompletedMainActor](media/2-12_CompletedMainActor_3.png)
 
  
 
@@ -130,7 +130,7 @@ Building an in-game RSS Reader that synchronizes feeds from your PC to
 World of
 Warcraft.
 
-![FeedReader](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/FeedReader_3.png)
+![FeedReader](media/FeedReader_3.png)
 
  
 
@@ -139,7 +139,7 @@ Warcraft.
 Download, convert and sync hundreds of YouTube videos to iTunes and
 Zune.
 
- ![innertube](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/innertube_3.png)
+ ![innertube](media/innertube_3.png)
 
 ### PeerCast
 
@@ -147,7 +147,7 @@ Stream videos on your home PC from anywhere in the world without special
 hardware using Peer Name Resolution Protocol
 (PnRP).
 
-![p2p0103](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/p2p0103_3.png)
+![p2p0103](media/p2p0103_3.png)
 
  
 
@@ -156,7 +156,7 @@ hardware using Peer Name Resolution Protocol
 Create custom online (Silverlight) polls for
 Twitter.
 
-![tv12](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/tv12_3.png)
+![tv12](media/tv12_3.png)
 
  
 
@@ -166,7 +166,7 @@ Read your email remotely from Windows Home Server without needing
 Exchange
 Server.
 
-![ol11](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/ol11_3.png)
+![ol11](media/ol11_3.png)
 
  
 
@@ -176,7 +176,7 @@ Hack a remote-controlled car so that you can control it using a Nintendo
 Wii
 Remote.
 
-![wiimotecar\_thumb](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/wiimotecar_thumb_3.jpg)
+![wiimotecar\_thumb](media/wiimotecar_thumb_3.jpg)
 
  
 
@@ -186,7 +186,7 @@ Create an interactive virtual whiteboard using a Nintendo Wii Remote's
 IR
 tracking.
 
-![whiteboard](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/whiteboard_3.png)
+![whiteboard](media/whiteboard_3.png)
 
  
 
@@ -196,7 +196,7 @@ Synchronize your holiday light display with music to create your own
 light
 show.
 
-![xmas15](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/Coding4FunBookThepeopleandtheprojects_99D7/xmas15_3.png)
+![xmas15](media/xmas15_3.png)
 
  
 

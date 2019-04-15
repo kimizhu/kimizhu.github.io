@@ -22,7 +22,7 @@ Of course, I had to ask Sara to bring it in and show it off, so here's
 Sara striking a Karate pose wearing the Scrolling LED Belt
 Buckle.
 
-![](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/SaraFordshowsofftheScrollingLEDBeltBuckl_746F/sara%5B4%5D.jpg)
+![](media/sara%5B4%5D.jpg)
 
 In case you don't know, Sara is a [tournament
 winning](http://blogs.msdn.com/saraford/archive/2006/10/23/karate-tournament-results.aspx)
@@ -35,7 +35,7 @@ like the VS Power Toys and other DevDiv open source projects.  
 Here's a close-up of the Scrolling LED Belt Buckle with a "Love VS"
 message
 
-![](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/SaraFordshowsofftheScrollingLEDBeltBuckl_746F/buckle1%5B4%5D.jpg)
+![](media/buckle1%5B4%5D.jpg)
 
  
 
@@ -62,7 +62,7 @@ display photographed at high speed which shows that our eyes are too
 slow to notice the missing "V" from
 VS.
 
-![](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/BlogFileStorage/blogs_msdn/danielfe/WindowsLiveWriter/SaraFordshowsofftheScrollingLEDBeltBuckl_746F/blink%5B4%5D.jpg)
+![](media/blink%5B4%5D.jpg)
 
  
 
