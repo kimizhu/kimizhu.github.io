@@ -1,0 +1,113 @@
+---
+layout: custom_footer
+
+---
+<div id='page'>
+<h1 class='entry-title'>TypeScript 2.0 is now available!</h1>
+ <a class='url fn n profile-usercard-hover' href='https://social.msdn.microsoft.com/profile/Daniel Rosenwasser' target='_blank'>Daniel Rosenwasser</a>
+<time>    9/22/2016 4:04:03 PM</time>
+<hr>
+<div id='content'>Today we're excited to announce the final release of TypeScript 2.0!
+
+TypeScript 2.0 has been a great journey for the team, with several contributions from the community and partners along the way. It brings several new <a href="https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript">features</a> that enhance developer productivity, advances TypeScript's alignment with ECMAScript's evolution, provides wide support for JavaScript libraries and tools, and augments the language service that powers a first class editing experience across tools.
+
+To get started, you can download <a href="http://download.microsoft.com/download/6/D/8/6D8381B0-03C1-4BD2-AE65-30FF0A4C62DA/TS2.0.3-TS-release20-nightly-20160921.1/TypeScript_Dev14Full.exe">TypeScript 2.0 for Visual Studio 2015</a> (which needs <a href="https://msdn.microsoft.com/en-us/library/mt752379.aspx">Update 3</a>), grab it with NuGet, start using TypeScript 2.0 <a href="https://code.visualstudio.com/docs/languages/typescript#_using-newer-typescript-versions">in Visual Studio Code</a>, or install it with npm:
+
+<div class="highlight highlight-source-shell">
+<pre>npm install -g typescript@2.0</pre>
+</div>
+
+For Visual Studio "15" Preview users, TypeScript 2.0 will be included in the next Preview release.
+<h2><a href="#the-20-journey" id="user-content-the-20-journey" class="anchor"></a>The 2.0 Journey</h2>
+A couple of years ago we set out on this journey to version 2.0. TypeScript 1.0 had successfully shown developers the potential of JavaScript when combined with static types. Compile-time error checking saved countless hours of bug hunting, and TypeScript's editor tools gave developers a huge productivity boost as they began building larger and larger JavaScript apps. However, to be a full superset of the most popular and widespread language in the world, TypeScript still had some growing to do.
+
+TypeScript 1.1 brought a new, completely rewritten compiler that delivered a <a href="https://blogs.msdn.microsoft.com/typescript/2014/10/06/announcing-typescript-1-1-ctp/">4x performance boost</a>. This new compiler core allowed more flexibility, faster iteration, and provided a performance baseline for future releases. Around the same time, the TypeScript repository <a href="https://blogs.msdn.microsoft.com/typescript/2014/07/21/new-compiler-and-moving-to-github/">migrated to GitHub</a> to encourage community engagement and provide a better platform for collaboration.
+
+TS 1.4 &amp; 1.5 introduced a large amount of <a href="https://blogs.msdn.microsoft.com/typescript/2015/01/16/announcing-typescript-1-4/">support for ES2015/ES6</a> in order to align with the future of the JavaScript language. In addition, TypeScript 1.5 introduced support for modules and decorators, allowing <a href="https://angular.io/">Angular 2</a> to <a href="https://blogs.msdn.microsoft.com/typescript/2015/03/05/angular-2-built-on-typescript/">adopt TypeScript</a> and partner with us in the evolution of TypeScript for their needs.
+
+TypeScript 1.6-1.8 delivered substantial <a href="https://blogs.msdn.microsoft.com/typescript/2015/09/16/announcing-typescript-1-6/">type</a> <a href="https://blogs.msdn.microsoft.com/typescript/2015/11/30/announcing-typescript-1-7/">system</a> <a href="https://blogs.msdn.microsoft.com/typescript/2016/02/22/announcing-typescript-1-8-2/">improvements</a>, with each new release lighting up additional JavaScript patterns and providing support for major JavaScript libraries. These releases also rounded out ES* support and buffed up the compiler with more advanced out-of-the-box error checking.
+
+Today we're thrilled to release version 2.0 of the TypeScript language. With this release, TypeScript delivers close ECMAScript spec alignment, wide support for JavaScript libraries and tools, and a language service that powers a first class editing experience in all major editors; all of which come together to provide an even more productive and scalable JavaScript development experience.
+<h2><a href="#the-typescript-community" id="user-content-the-typescript-community" class="anchor"></a>The TypeScript Community</h2>
+Since 1.0, TypeScript has grown not only as a language but also as a community. Last month alone, TypeScript had over 2 million npm downloads compared to just 275K in the same month last year. In addition, we've had tremendous adoption of the TypeScript nightly builds with over 2000 users participating in discussion on GitHub and 1500 users logging issues. We've also accepted PRs from over 150 users, ranging from bug fixes to prototypes and major features.
+
+<a href="https://github.com/DefinitelyTyped/DefinitelyTyped/">DefinitelyTyped</a> is another example of our community going above and beyond. Starting out as a small repository of declaration files (files that describe the shape of your JS libraries to TypeScript), it now contains over 2,000 libraries that have been written by-hand by over 2,500 individual contributors. It is currently the largest formal description of JavaScript libraries that we know of. By building up DefinitelyTyped, the TypeScript community has not only supported the usage of TypeScript with existing JavaScript libraries but also better defined our understanding of all JavaScript code.
+
+The TypeScript and greater JavaScript communities have played a major role in the success that TypeScript has achieved thus far, and whether you've contributed, tweeted, tested, filed issues, or used TypeScript in your projects, we're grateful for your continued support!
+
+<img src="https://msdnshared.blob.core.windows.net/media/2016/09/ts-2-0-npm-downloads.png" class="aligncenter" />
+
+<h2><a href="#whats-new-in-typescript-20" id="user-content-whats-new-in-typescript-20" class="anchor"></a>What's New in TypeScript 2.0?</h2>
+TypeScript 2.0 brings several new features over the 1.8 release, some of which we detailed in the 2.0 <a href="https://blogs.msdn.microsoft.com/typescript/2016/07/11/announcing-typescript-2-0-beta/">Beta</a> and <a href="https://blogs.msdn.microsoft.com/typescript/2016/08/30/announcing-typescript-2-0-rc/">Release Candidate</a> blog posts. Below are highlights of the biggest features that are now available in TypeScript, but you can read about <a href="https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#tagged-union-types">tagged unions</a>, the new <a href="https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#the-never-type"><code>never</code> type</a>, <a href="https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#specifying-the-type-of-this-for-functions"><code>this</code> types</a> for functions, <a href="https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#glob-support-in-tsconfigjson">glob support</a> in tsconfig, and all the other new features <a href="https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript">on our wiki</a>.
+
+<h3><a href="#simplified-declaration-file-dts-acquisition" id="user-content-simplified-declaration-file-dts-acquisition" class="anchor"></a>Simplified Declaration File (<code style="font-size: 1em">.d.ts</code>) Acquisition</h3>
+Typings and tsd have been fantastic tools for the TypeScript ecosystem. Up until now, these package managers helped users get .d.ts files from DefinitelyTyped to their projects as fast as possible. Despite these tools, one of the biggest pain points for new users has been learning how to acquire and manage declaration file dependencies from these package managers.
+
+Getting and using declaration files in 2.0 is much easier. To get declarations for a library like lodash, all you need is npm:
+<div class="highlight highlight-source-shell">
+<pre>npm install --save @types/lodash</pre>
+</div>
+The above command installs the <a href="https://docs.npmjs.com/misc/scope">scoped package</a> <code>@types/lodash</code> which TypeScript 2.0 will automatically reference when importing <code>lodash</code> anywhere in your program. This means you don’t need any additional tools and your <code>.d.ts</code> files can travel with the rest of your dependencies in your <code>package.json</code>.
+
+It’s worth noting that both Typings and tsd will continue to work for existing projects, however 2.0-compatible declaration files may not be available through these tools. As such, we strongly recommend upgrading to the new npm workflow for TypeScript 2.0 and beyond.
+
+We'd like to thank Blake Embrey for his work on Typings and helping us bring this solution forward.
+<h3><a href="#non-nullable-types" id="user-content-non-nullable-types" class="anchor"></a>Non-nullable Types</h3>
+JavaScript has two values for "emptiness" - <code>null</code> and <code>undefined</code>. If <code>null</code> is <a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">the billion dollar mistake</a>, <code>undefined</code> only doubles our losses. These two values are a huge source of errors in the JavaScript world because users often forget to account for <code>null</code> or <code>undefined</code> being returned from APIs.
+
+TypeScript originally started out with the idea that types were always nullable. This meant that something with the type <code>number</code> could also have a value of <code>null</code> or <code>undefined</code>. Unfortunately, this didn’t provide any protection from <code>null</code>/<code>undefined</code> issues.
+
+In TypeScript 2.0, <code>null</code> and <code>undefined</code> have their own types which allows developers to explicitly express when <code>null</code>/<code>undefined</code> values are acceptable. Now, when something can be either a <code>number</code> or <code>null</code>, you can describe it with the union type <code>number | null</code> (which reads as "number or null").
+
+<video autoplay loop src="https://msdnshared.blob.core.windows.net/media/2016/09/nonnullable-types-fade.mp4" style='width: 100%'>
+</video>
+
+Because this is a breaking change, we've added a <code>--strictNullChecks</code> mode to opt into this behavior. However, going forward it will be a general best practice to turn this flag on as it will help catch a wide range of <code>null</code>/<code>undefined</code> errors. To read more about non-nullable types, check out <a href="https://github.com/Microsoft/TypeScript/pull/7140">the PR on GitHub</a>.
+<h3><a href="#control-flow-analyzed-types" id="user-content-control-flow-analyzed-types" class="anchor"></a>Control Flow Analyzed Types</h3>
+TypeScript has had control flow analysis since 1.8, but starting in 2.0 we've expanded it to analyze even more control flows to produce the most specific type possible at any given point. When combined with non-nullable types, TypeScript can now do much more complex checks, like definite assignment analysis.
+<div class="highlight highlight-source-ts">
+<pre><span style="color: #0000ff">function</span> <span class="pl-en">f</span>(<span style="color: #000000">condition</span>: <span style="color: #267F99">boolean</span>) {
+    <span style="color: #0000ff">let</span> <span style="color: #000000">result</span>: <span style="color: #267F99">number</span>;
+    <span style="color: #0000ff">if</span> (condition) {
+        result <span style="color: #0000ff">=</span> computeImportantStuff();
+    }
+
+    <span style="color: #148A14">// Whoops! 'result' might never have been initialized!</span>
+    <span style="color: #0000ff">return</span> result;
+}</pre>
+</div>
+We’d like to thank Ivo Gabe de Wolff for contributing the initial work and providing substantial feedback on this feature. You can read more about control flow analysis on <a href="https://github.com/Microsoft/TypeScript/pull/8010">the PR itself</a>.
+
+<h3><a href="#the-readonly-modifier" id="user-content-the-readonly-modifier" class="anchor"></a>The <code style="font-size: 1em">readonly</code> Modifier</h3>
+
+Immutable programming in TypeScript just got easier. Starting TypeScript 2.0, you can declare properties as read-only.
+<div class="highlight highlight-source-ts">
+<pre><span style="color: #0000ff">class</span> <span style="color: #267F99">Person</span> {
+    <span style="color: #0000ff">readonly</span> <span style="color: #000000">name</span>: <span style="color: #267F99">string</span>;
+
+    <span style="color: #0000ff">constructor</span>(<span style="color: #000000">name</span>: <span style="color: #267F99">string</span>) {
+        <span style="color: #0000ff">if</span> (name.length <span style="color: #0000ff">&lt;</span> <span style="color: #267F99">1</span>) {
+            <span style="color: #0000ff">throw</span> <span style="color: #0000ff">new</span> <span style="color: #267F99">Error</span>(<span style="color: #a31515">"Empty name!"</span>);
+        }
+
+        <span style="color: #0000ff">this</span>.name <span style="color: #0000ff">=</span> name;
+    }
+}
+
+<span style="color: #148A14">// Error! 'name' is read-only.</span>
+<span style="color: #0000ff">new</span> <span style="color: #267F99">Person</span>(<span style="color: #a31515">"Daniel"</span>).name <span style="color: #0000ff">=</span> <span style="color: #a31515">"Dan"</span>;</pre>
+</div>
+Any get-accessor without a set-accessor is also now considered read-only.
+<h2><a href="#whats-next" id="user-content-whats-next" class="anchor"></a>What’s Next</h2>
+TypeScript is JavaScript that scales. Starting from the same syntax and semantics that millions of JavaScript developers know today, TypeScript allows developers to use existing JavaScript code, incorporate popular JavaScript libraries, and call TypeScript code from JavaScript. TypeScript's optional static types enable JavaScript developers to use highly-productive development tools and practices like static checking and code refactoring when developing JavaScript applications.
+
+Going forward, we will continue to work with our partners and the community to evolve TypeScript’s type system to allow users to further express JavaScript in a statically typed fashion. In addition, we will focus on enhancing the TypeScript language service and set of tooling features so that developer tools become smarter and further boost developer productivity.
+
+To each and every one of you who has been a part of the journey to 2.0: thank you! Your feedback and enthusiasm have brought the TypeScript language and ecosystem to where it is today. We hope you're as excited for 2.0 and beyond as we are.
+
+If you still haven't used TypeScript, <a href="http://www.typescriptlang.org/docs/tutorial.html">give it a try</a>! We'd love to hear from you.
+
+Happy hacking!
+
+The TypeScript Team</div>
+</div>
