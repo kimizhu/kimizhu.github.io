@@ -1,4 +1,3 @@
-$("#page").prepend("<div id='archived_warning'>This blog has been archived!</div>");
 var content = $("#content").html();
 if(content !='')
 { 
