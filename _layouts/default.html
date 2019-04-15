@@ -4,6 +4,55 @@
 
 
 <body>
+<header id="site-header" class="site-header row" role="banner">
+		<div id="site-header-global-wrapper" class="site-header-global-wrapper">
+			<div id="site-header-global" class="site-header-global">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-profile-menu" aria-label="toggle menu" tabindex="0" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div id="site-logo" class="col-sm-5 row navbar-header">
+					<div id="header-microsoft-logo">
+						<a id="home-link" href="http://msdn.microsoft.com/" tabindex="1" aria-label="Microsoft Developer">
+							<img id="header-microsoft-logo-svg" src="../resource/images/ms-logo-gray.svg" alt="Microsoft logo">
+							<span id="brand">
+								<span id="brand-separator">|</span>
+								<span id="brand-name"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div id="site-header-global-right" class="col-sm-7">			
+				</div>
+
+			</div>
+
+		</div>
+		<div id="site-header-blog-wrapper" class="site-header-blog-wrapper ms-blog-header clear-both">
+			<div id="site-header-blog" class="site-header-blog">
+				<nav class="navbar navbar-inverse">
+					<div id="blog-logo-area" class="navbar-header">
+						<div id="blog-logo" data-toggle="collapse" data-target="#blog-menu" tabindex="0" aria-label="blog logo">
+														<div id="blog-logo-text">
+				<h1 class="site-title ms-blog-title">
+					<a href="https://blogs.msdn.microsoft.com" class="for-desktop">
+						MSDN Blogs					</a>
+					<a href="https://blogs.msdn.microsoft.com" class="for-mobile">
+						MSDN Blogs					</a>
+				</h1>
+				<p class="site-description ms-blog-description">Get the latest information, insights, announcements, and news from Microsoft experts and developers in the MSDN blogs.</p>
+			</div>
+									</div>
+					</div>
+									</nav>
+			</div>
+		</div>
+		<div id="site-header-image-wrapper" class="ms-blog-banner">
+			<div id="site-header-image">
+											</div>
+		</div>
+	</header>
     {{ content }}
     {% include foot.html %}
 
